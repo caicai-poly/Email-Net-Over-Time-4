@@ -1,0 +1,175 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Email Network</title>
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <!-- end CSS-->
+<style>
+  input[type=range]:focus::-ms-fill-upper {
+    background: #2497E3;
+	}
+  .orange li {
+    background-color: #FF9224;
+	}
+  .blue li {
+    background-color: #BEBEBE;
+	}
+  .green li {
+    background-color: #93FF93;
+	}
+  .close_btn{
+	font-family:arial;
+	font-size:30px;
+	font-weight:700;color:#999;
+	text-decoration:none;
+	float:right;padding-right:4px;
+	}
+	#Subjects{position:fixed;left:550px;top:300px;background:white;width:440px;height:315px;border:3px solid #444;border-radius:7px;z-index:10000;display:none;}
+	#subjectList{position:fixed;left:555px;top:330px;background:white;width:426px;height:282px;border:3px solid #444;border-radius:7px;z-index:10000;}
+</style>
+</head>
+
+<body>
+
+    <!-- <div id="container" class="container">
+		<header>
+		<h1>Email Networks</h1>
+		<p>**************************************</p>
+		</header>
+
+
+			<div id="left" width="100" height="400" >
+                <input type="text" value="sender" > </br> </br> </br>
+				<input type="text" value="reciver" >
+            </div> -->
+
+
+
+
+
+
+			<!-- <svg id="right" width="100" height="400" >
+                <rect width="100" height="400"
+                      fill="blue"
+                      stroke-width="1">
+
+                </rect>
+            </svg>
+
+
+			<svg id="bottom" width="800" height="200" >
+                <rect width="800" height="200"
+                      fill="purple"
+                      stroke-width="1">
+
+                </rect>
+            </svg>
+
+	</div>-->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+        Email network over time?
+      </a>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="Subjects">
+        <div class="row1">
+            <a href="javascript:void(0)" title="close" class="close_btn" id="closeBtn">×</a>
+        </div>
+        <div class="row">
+            <span class="subjects">
+                <textarea id="subjectList" rows="3" cols="20" readonly="readonly">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa </textarea>
+            </span>
+        </div>
+    </div>
+
+  <div class="container-fluid">
+
+	<div class="row">
+	<div class="col-md-2">
+    <div class="panel panel-primary">
+      <div class="panel-heading">List</div>
+        <div class="panel-body">
+          <div id = "list" style="height:1000px; overflow: scroll">
+		<h4 style="color:orange">New Enter</h4>
+		<ul class="orange list-unstyled list-group" style="background-color:orange">
+		</ul>
+		
+		<h4 style="color:green">Active</h4>
+		<ul class="green list-unstyled list-group" style="background-color:green">
+		</ul>
+
+		<h4 style="color:grey">Inactive</h4>
+		<ul class="blue list-unstyled list-group" style="background-color:grey">
+		</ul>
+
+
+  </div>
+</div>
+	</div></div>
+
+
+	<div class="col-md-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Graph</div>
+        <div class="panel-body">
+		<span id="time"><text> </text></span>
+          <div id = "graph"></div>
+      </div>
+      <div class="panel-footer">Data from <a href="https://www.cs.cmu.edu/~./enron/">ENRON EMAIL</a>.</div>
+    </div>
+  </div>
+
+
+	  <div class="col-md-2">
+      <div class="panel panel-primary">
+        <div class="panel-heading">hotkey</div>
+            <div id = "hotkey" style="height:1000px; overflow: scroll">
+			  HOTKEY
+              <ul class="hotkey list-unstyled list-group">
+              </ul>
+            </div></div>
+          </div>
+	</div>
+</div>
+
+ <!--! end of #container -->
+
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="render.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+  <!--<script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <script src="js/libs/coffee-script.js"></script>
+  <script src="js/Tooltip.js"></script>
+  <script type="text/coffeescript" src="coffee/vis.coffee"></script>
+
+  <script> // Change UA-XXXXX-X to be your site's ID
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+</body>
+</html>
